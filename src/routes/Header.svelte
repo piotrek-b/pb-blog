@@ -1,60 +1,105 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+	import logo from '$lib/images/logo.svg'
+  import { browser } from '$app/environment';
+
+	let ms = 500
+	let visible = true
+	const incr = () => (visible = !visible)
+	let className = 'big'
+ 
+	let clear: ReturnType<typeof setInterval>
+	$: {
+		clearInterval(clear)
+		clear = setInterval(incr, ms)
+	}
+
+	if (browser) {
+
+		window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    className = 'small'
+  } else {
+    className = 'big'
+  }
+}
+	}
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
-
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
+<header class="{className}">
+	<div>
+		<div class="corner">
+			<a on:click="{() => window.scrollTo({top: 0, behavior: 'smooth'})}">
+				<!-- #4c4c4c -->
+				<img src={logo} alt="SvelteKit" />
+				<span style="display:{visible && className !== 'small' ? '': 'none'}; font-weight: bold;">_</span>
+			</a>
+		</div>
+		<nav>
+			<a style="margin-right: 12px">Posts</a>
+			<a style="margin-right: 12px">About</a>
+			<a>EN</a>
+		</nav>
 	</div>
 </header>
 
 <style>
 	header {
+		transition: 0.2s;
+		position: fixed;
+		background: white;
+		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+	}
+	header.big {
+
+		border-bottom: 1px solid rgb(229, 229, 229);
 	}
 
-	.corner {
-		width: 3em;
-		height: 3em;
+	header.small {
+
+		border-bottom: 2px solid rgb(229, 229, 229);
+	}
+
+	header.big img {
+		width: 2em;
+		height: 2em;
+		transition: 0.2s;
+	}
+
+	header.big > div {
+			padding: 24px;
+		transition: 0.2s;
+	}
+
+	header.small img {
+		width: 1em;
+		height: 1em;
+		margin-left: 12px;
+		transition: 0.2s;
+	}
+	header.small > div {
+			padding: 12px;
+		transition: 0.2s;
+	}
+	header > div {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 48em;
 	}
 
 	.corner a {
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		align-items: flex-end;
 		width: 100%;
 		height: 100%;
+		color: #4c4c4c;
 	}
 
 	.corner img {
@@ -64,6 +109,7 @@
 	}
 
 	nav {
+		font-family: monospace;
 		display: flex;
 		justify-content: center;
 		--background: rgba(255, 255, 255, 0.7);
@@ -121,9 +167,5 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
 	}
 </style>
