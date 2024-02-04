@@ -1,7 +1,6 @@
 <script lang="ts">
 	import logoDark from '$lib/images/logo_dark.svg';
 	import logo from '$lib/images/logo.svg';
-	import { browser } from '$app/environment';
 	import { isDarkMode } from './utils/dark-mode';
 
 	let ms = 500;

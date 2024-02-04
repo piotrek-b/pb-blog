@@ -18,8 +18,6 @@
 			strSplit.splice(-1);
 		}
 
-		console.log(strSplit);
-
 		return strSplit.join('\n');
 	}
 
@@ -42,5 +40,5 @@
 	<button class="absolute right-3 top-3 flex" on:click={copyToClipboard}>
 		<img src={$isDarkMode ? copyDark : copy} alt="copy" />
 	</button>
-	<pre>{@html highlightedCode}</pre>
+	<pre class="overflow-x-scroll font-mono">{@html highlightedCode}</pre>
 </code>
