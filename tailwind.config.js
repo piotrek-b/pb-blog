@@ -3,7 +3,7 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		colors: {
-      white: '#fff',
+			white: '#fff',
 			blue: '#1fb6ff',
 			purple: '#7e5bef',
 			pink: '#ff49db',

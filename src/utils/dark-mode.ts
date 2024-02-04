@@ -6,6 +6,7 @@ const getDarkMode = () => {
 	const darkModeQuery = browser ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
 	if (darkModeQuery) {
+		isDarkMode.update(() => darkModeQuery.matches);
 		darkModeQuery.addEventListener('change', (ev) => {
 			isDarkMode.update(() => ev.matches);
 		});

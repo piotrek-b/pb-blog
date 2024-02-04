@@ -15,7 +15,7 @@
 		}
 
 		if (strSplit[strSplit.length - 1] === '') {
-			strSplit.splice(-1);
+			strSplit.splice(strSplit.length - 1, 1);
 		}
 
 		return strSplit.join('\n');
@@ -40,5 +40,5 @@
 	<button class="absolute right-3 top-3 flex" on:click={copyToClipboard}>
 		<img src={$isDarkMode ? copyDark : copy} alt="copy" />
 	</button>
-	<pre class="overflow-x-scroll font-mono">{@html highlightedCode}</pre>
+	<pre class="no-scrollbar overflow-x-scroll font-mono">{@html highlightedCode}</pre>
 </code>
