@@ -12,7 +12,7 @@ const getDarkMode = () => {
 		});
 	}
 
-	return derived(isDarkMode, (isDarkModeNow) => isDarkModeNow);
+	return derived(isDarkMode, ($isDarkMode) => $isDarkMode);
 };
 
 export const isDarkMode = getDarkMode();

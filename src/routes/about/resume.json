@@ -1,0 +1,177 @@
+{
+  "basics": {
+    "name": "Piotr Bechcicki",
+    "label": "Frontend Engineer",
+    "image": "",
+    "email": "piotr.bechcicki.o@gmail.com",
+    "phone": "+34 634 89 01 71",
+    "url": "https://pb-blog.com",
+    "summary": "Experienced Software Engineer skilled in FullStack development. \nProven track record in launching successful products from the ground up. \nAdaptable, team-oriented, and efficient, with a focus on clean coding. \nCommitted to delivering quality software. \nCurrently based in Barcelona.",
+    "location": {
+      "address": "",
+      "postalCode": "08006",
+      "city": "Barcelona",
+      "countryCode": "ES",
+      "region": "Catalonia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Piotr Bechcicki",
+        "url": "https://www.linkedin.com/in/piotr-bechcicki-168009140"
+      },
+      {
+        "network": "GitHub",
+        "username": "piotrek-b",
+        "url": "https://github.com/piotrek-b"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Glovo",
+      "position": "Fullstack Engineer",
+      "url": "https://glovoapp.com",
+      "startDate": "2022-01-01",
+      "endDate": "",
+      "summary": "Description…",
+      "highlights": [
+        "Developed in-house invoicing solutions for Glovo partners",
+        "Built a first revenue-making user-facing Glovo FinTech product from scratch",
+        "Performed A/B & E2E testing and covered solutions with observability tooling",
+        "Led a modularisation of a FinTech owned frontend module and its migration from Vue2 to Vue3",
+        "Participated in 2 hackatons, extending Glovo iOS app & implementing GPT-powered features"
+      ]
+    },
+    {
+      "name": "CodiLime",
+      "position": "Frontend Engineer",
+      "url": "https://codilime.com",
+      "startDate": "2018-07-15",
+      "endDate": "2021-12-31",
+      "summary": "Description…",
+      "highlights": [
+        "Built an interface for a Data Science end-to-end platform from scratch",
+        "Built a library to draw an interactive graph to audit network traffic from scratch",
+        "Built a POC interface extension to ONOS - Open Network Operating System (open source)",
+        "Led a development of network management system UI",
+        "Worked closely with Scandinavian and US clients"
+      ]
+    },
+    {
+      "name": "Samsung Electronics",
+      "position": "JavaScript Developer",
+      "url": "https://samsung.com",
+      "startDate": "2017-07-01",
+      "endDate": "2017-06-30",
+      "summary": "Description…",
+      "highlights": [
+        "Built showcase webapps for the newest versions of Tizen OS working on TV screens",
+        "Developed a web platform for managing content and data across multiple devices",
+        "Built a webapp to improve Samsung B2B clients surveying"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Warsaw University of Life Sciences",
+      "url": "https://wzim.sggw.edu.pl/?lang=en",
+      "area": "Informatics",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2015-10-01",
+      "endDate": "2019-09-30",
+      "score": "5.0",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS3",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Web Frameworks",
+      "level": "Master",
+      "keywords": [
+        "React",
+        "Vue.js",
+        "Svelte",
+        "Angular"
+      ]
+    },
+    {
+      "name": "State Management",
+      "level": "Master",
+      "keywords": [
+        "Redux",
+        "Pinia"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Junior",
+      "keywords": [
+        "Java",
+        "Spring",
+        "Kotlin",
+        "Kafka"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Polish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Intermediate"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music production",
+      "keywords": []
+    },
+    {
+      "name": "Analog photography",
+      "keywords": []
+    },
+    {
+      "name": "Boxing",
+      "keywords": []
+    },
+    {
+      "name": "Cinema",
+      "keywords": []
+    },
+    {
+      "name": "History",
+      "keywords": []
+    },
+    {
+      "name": "Education",
+      "keywords": []
+    },
+    {
+      "name": "AI",
+      "keywords": []
+    }
+  ],
+  "references": [],
+  "projects": []
+}
