@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Logo from '../Logo.svelte';
-	import { scrollData } from '../utils/scroll-top';
+	import { scrollData } from '$lib/stores';
 
 	let variant = 'big';
 	let hidden = false;

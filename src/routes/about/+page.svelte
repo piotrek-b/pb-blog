@@ -2,7 +2,7 @@
 	import { Heading } from '$lib/components';
 	import profilePic from '$lib/images/me.jpg';
 	import resume from './resume.json';
-	import { isDarkMode } from '../../utils/dark-mode';
+	import { isDarkMode } from '$lib/stores';
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import logoDark from '$lib/images/logo_dark.svg';
 	import logo from '$lib/images/logo.svg';
-	import { isDarkMode } from './utils/dark-mode';
+	import { isDarkMode } from '$lib/stores';
 
 	let ms = 500;
 	let visible = true;

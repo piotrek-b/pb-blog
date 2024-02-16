@@ -3,34 +3,25 @@
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import copy from '$lib/images/copy.svg';
 	import copyDark from '$lib/images/copy_dark.svg';
-	import { isDarkMode } from './utils/dark-mode';
+	import { isDarkMode } from '$lib/stores';
 
 	export let code: string;
+	export let language: string;
 
-	function removeFirstAndLastWhiteSpaceIfPresent(str: string) {
-		const strSplit = str.split('\n');
-
-		if (strSplit[0] === '') {
-			strSplit.splice(0, 1);
-		}
-
-		if (strSplit[strSplit.length - 1] === '') {
-			strSplit.splice(strSplit.length - 1, 1);
-		}
-
-		return strSplit.join('\n');
+	function trimNewlines(str: string) {
+		return str.replace(/^[\n\r]+|[\n\r]+$/g, '');
 	}
-
-	$: codeFixed = removeFirstAndLastWhiteSpaceIfPresent(code);
-
-	hljs.registerLanguage('javascript', javascript);
-	$: highlightedCode = hljs.highlight(codeFixed, {
-		language: 'javascript'
-	}).value;
 
 	function copyToClipboard() {
-		navigator.clipboard.writeText(codeFixed);
+		navigator.clipboard.writeText(codeTrimmed);
 	}
+
+	hljs.registerLanguage('javascript', javascript);
+
+	$: codeTrimmed = trimNewlines(code);
+	$: highlightedCode = hljs.highlight(codeTrimmed, {
+		language
+	}).value;
 </script>
 
 <code

@@ -34,6 +34,6 @@ console.log(multiply(x, y)); // 20
 		<p class="py-6 text-justify text-lg font-bold">
 			Dopamine increase is not always causing the working memory improvements.
 		</p>
-		<Code {code} />
+		<Code {code} language="javascript" />
 	{/each}
 </div>
